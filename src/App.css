@@ -1,0 +1,31 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.headerTitle {
+
+}
+
+
+.salesNumber{
+    color: limegreen;
+}
+
+.purchaseNumber{
+    color: dodgerblue;
+}
+
+.toSellNumber{
+    color: indianred;
+}
+
+.bestVerkochteTv {
+
+}
+
+.deTvBanner{
+
+}
