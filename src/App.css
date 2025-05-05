@@ -4,22 +4,71 @@
     padding: 0;
 }
 
+h2{
+    padding: 1em 0 1em 0;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+.outercontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.innercontainter{
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em;
+}
 
 .headerTitle {
+    display: flex;
+    align-items: center;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
 
+
+
+.verkoopOverzicht {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numberArticle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    row-gap: 1em;
+    padding: 1em;
 }
 
 
 .salesNumber{
-    color: limegreen;
+    color: 	hsla(130, 50%, 49%, 0.8);
+    border: hsla(130, 50%, 49%, 0.8) solid 1px;
+    background-color:	hsla(130, 50%, 30%, 0.1);
 }
 
 .purchaseNumber{
-    color: dodgerblue;
+    color: 	hsla(240, 89%, 40%, 0.8);
+    border: hsla(240, 89%, 40%, 0.8) solid 1px;
+    background-color: 	hsla(240, 89%, 40%, 0.1);
 }
 
 .toSellNumber{
-    color: indianred;
+    color: 	hsla(0, 89%, 40%, 0.8);
+    border: hsla(0, 89%, 40%, 0.8) solid 1px;
+    background-color: 	hsla(0, 89%, 40%, 0.1);
 }
 
 .bestVerkochteTv {
@@ -27,5 +76,30 @@
 }
 
 .deTvBanner{
+    display: flex;
+    border: black dashed 1px;
+    background-color: lightgrey;
+    padding: 1.5em;
+}
 
+.deTvBannerImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#bestSellerIMG{
+    height: 250px;
+}
+
+.deTvBannerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2em;
+    gap: 3em;
+}
+
+#tvPrice {
+    font-size: 2em;
 }
