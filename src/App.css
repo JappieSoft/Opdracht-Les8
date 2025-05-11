@@ -1,8 +1,25 @@
+/*-------------------- CSS RESET --------------------*/
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --color-ligthgreen: hsla(130, 50%, 30%, 0.1);   /*background-color green*/
+    --color-green: hsla(130, 50%, 49%, 0.8);        /*normal-color green*/
+    --color-blue: hsla(240, 89%, 40%, 0.8);         /*normal-color blue*/
+    --color-lightblue: hsla(240, 89%, 40%, 0.1);    /*background-color blue*/
+    --color-red: hsla(0, 89%, 40%, 0.8);            /*normal-color blue*/
+    --color-lightred: hsla(0, 89%, 40%, 0.1);       /*background-color blue*/
+    --color-lightgray: hsla(0, 0%, 83%, 1.0);
+    --color-gray: hsla(0, 0%, 70%, 1.0);
+    --color-black: hsl(0, 0%, 5%, 1.0);
+
+}
+
+/*-------------------- Typographi --------------------*/
 
 h2{
     padding: 1em 0 1em 0;
@@ -11,6 +28,8 @@ h2{
 p{
     font-size: 1.2em;
 }
+
+/*-------------------- CONTAINERS --------------------*/
 
 .outercontainer{
     display: flex;
@@ -25,6 +44,8 @@ p{
     padding: 0.5em;
 }
 
+/*-------------------- HEADER --------------------*/
+
 .headerTitle {
     display: flex;
     align-items: center;
@@ -32,7 +53,8 @@ p{
     padding-bottom: 1em;
 }
 
-
+/*-------------------- MAIN --------------------*/
+/*-------------------- VERKOOP OVERZICHT --------------------*/
 
 .verkoopOverzicht {
     display: flex;
@@ -54,22 +76,24 @@ p{
 
 
 .salesNumber{
-    color: 	hsla(130, 50%, 49%, 0.8);
-    border: hsla(130, 50%, 49%, 0.8) solid 1px;
-    background-color:	hsla(130, 50%, 30%, 0.1);
+    color: 	var(--color-green);
+    border: var(--color-green) solid 1px;
+    background-color: var(--color-ligthgreen);
 }
 
 .purchaseNumber{
-    color: 	hsla(240, 89%, 40%, 0.8);
-    border: hsla(240, 89%, 40%, 0.8) solid 1px;
-    background-color: 	hsla(240, 89%, 40%, 0.1);
+    color: 	var(--color-blue);
+    border: var(--color-blue) solid 1px;
+    background-color: 	var(--color-lightblue);
 }
 
 .toSellNumber{
-    color: 	hsla(0, 89%, 40%, 0.8);
-    border: hsla(0, 89%, 40%, 0.8) solid 1px;
-    background-color: 	hsla(0, 89%, 40%, 0.1);
+    color: 	var(--color-red);
+    border: var(--color-red) solid 1px;
+    background-color: 	var(--color-lightred);
 }
+
+/*-------------------- BESTSELLER --------------------*/
 
 .bestVerkochteTv {
 
@@ -77,8 +101,8 @@ p{
 
 .deTvBanner{
     display: flex;
-    border: black dashed 1px;
-    background-color: lightgrey;
+    border: var(--color-black) dashed 1px;
+    background-color: var(--color-lightgray);
     padding: 1.5em;
 }
 
@@ -103,3 +127,42 @@ p{
 #tvPrice {
     font-size: 2em;
 }
+
+#tvOptions{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.check-icons{
+    width: 30px;
+    height: 30px;
+}
+/*-------------------- NAV-BUTTONS --------------------*/
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+}
+
+.navbar button, .navbar button:visited {
+    background-color: var(--color-lightgray);
+    color: var(--color-black);
+    border: var(--color-gray) solid 2px;
+    height: 40px;
+    width: 250px;
+    border-radius: 0.5em;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar button:hover, .navbar button:active {
+    background-color: var(--color-gray);
+}
+
+
+
+/*-------------------- THE END --------------------*/

@@ -11,9 +11,17 @@ function App() {
     console.log(`sold: ${salesCounter(inventory)}`);
     console.log(`purchased: ${stockCounter(inventory)}`);
     console.log(`to sell: ${purchasedCounter(inventory)}`);
-/*    console.log(`bestseller name: ${tvName(bestSellingTv)}`);
-    console.log(`bestseller price: ${tvPrice(bestSellingTv)}`);
-    console.log(`bestseller size: ${availableSizes(bestSellingTv)}`);*/
+
+
+    function  meestVerkochtKlik () {
+        console.log('Meest verkocht eerst?');
+    }
+    function  goedkoopsteKlik () {
+        console.log('Goedkoopste eerst?');
+    }
+    function  geschiktSportKlik () {
+        console.log('Geschikt voor sport eerst?');
+    }
 
 
     return (
@@ -47,14 +55,30 @@ function App() {
                         <h2>Best verkochte TV</h2>
                         <article className="deTvBanner">
                             <div className="deTvBannerImg">
-                                <img id="bestSellerIMG" src={document.textContent = tvImage(bestSellingTv)} alt="tv picture"></img>
+                                <img id="bestSellerIMG" src={document.textContent = tvImage(bestSellingTv)}
+                                     alt="tv picture"></img>
                             </div>
                             <div className="deTvBannerText">
-                            <p id="tvName">{document.textContent = tvName(bestSellingTv)}</p>
-                            <p id="tvPrice">{document.textContent = tvPrice(bestSellingTv)}</p>
-                            <p id="tvSizes">{document.textContent = availableSizes(bestSellingTv)}</p>
+                                <p id="tvName">{document.textContent = tvName(bestSellingTv)}</p>
+                                <p id="tvPrice">{document.textContent = tvPrice(bestSellingTv)}</p>
+                                <p id="tvSizes">{document.textContent = availableSizes(bestSellingTv)}</p>
+                                <p id="tvOptions"><img className="check-icons" src="src/assets/check.png"
+                                                       alt="check icon"/> wifi <img className="check-icons"
+                                                                                    src="src/assets/minus.png"
+                                                                                    alt="NOT check icon"/> speech <img
+                                    className="check-icons" src="src/assets/check.png" alt="check icon"/> hdr <img
+                                    className="check-icons" src="src/assets/check.png" alt="check icon"/> bluetooth <img
+                                    className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> ambilight
+                                </p>
                             </div>
                         </article>
+                    </section>
+                    <section className="navButtons">
+                        <nav className="navbar">
+                            <button className="navButton" onClick={meestVerkochtKlik}>Meest verkocht eerst?</button>
+                            <button className="navButton" onClick={goedkoopsteKlik}>Goedkoopste eerst?</button>
+                            <button className="navButton" onClick={geschiktSportKlik}>Meest geschikt voor sport eerst?</button>
+                    </nav>
                     </section>
                 </div>
             </main>
