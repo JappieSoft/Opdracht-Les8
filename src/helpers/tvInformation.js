@@ -4,6 +4,7 @@ function tvName(inputArray) {
 }
 
 
+
 export function tvPrice(inputArray) {
     let priceString = `€${inputArray.price},-`;
     return priceString;

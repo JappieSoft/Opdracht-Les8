@@ -3,10 +3,18 @@ import {inventory, bestSellingTv} from './constants/inventory.js';
 import salesCounter from './helpers/sales.js';
 import stockCounter from "./helpers/stock.js";
 import purchasedCounter from "./helpers/purchases.js";
-import tvName, { tvPrice, tvImage ,availableSizes } from "./helpers/tvInformation.js";
+import tvName, { tvPrice, tvImage, availableSizes } from "./helpers/tvInformation.js";
+
+/*Temp bestand hieronder:*/
+import showOutcomeInConsole from './constants/oefenbestand.js';
+
 
 
 function App() {
+
+    /*Temp entry hieronder:*/
+    showOutcomeInConsole();
+
 
     console.log(`sold: ${salesCounter(inventory)}`);
     console.log(`purchased: ${stockCounter(inventory)}`);
@@ -62,10 +70,9 @@ function App() {
                                 <p id="tvName">{document.textContent = tvName(bestSellingTv)}</p>
                                 <p id="tvPrice">{document.textContent = tvPrice(bestSellingTv)}</p>
                                 <p id="tvSizes">{document.textContent = availableSizes(bestSellingTv)}</p>
-                                <p id="tvOptions"><img className="check-icons" src="src/assets/check.png"
-                                                       alt="check icon"/> wifi <img className="check-icons"
-                                                                                    src="src/assets/minus.png"
-                                                                                    alt="NOT check icon"/> speech <img
+                                <p id="tvOptions"><img
+                                    className="check-icons" src="src/assets/check.png" alt="check icon"/> wifi <img
+                                    className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> speech <img
                                     className="check-icons" src="src/assets/check.png" alt="check icon"/> hdr <img
                                     className="check-icons" src="src/assets/check.png" alt="check icon"/> bluetooth <img
                                     className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> ambilight
@@ -73,6 +80,7 @@ function App() {
                             </div>
                         </article>
                     </section>
+                    <h2>Alle Televisies</h2>
                     <section className="navButtons">
                         <nav className="navbar">
                             <button className="navButton" onClick={meestVerkochtKlik}>Meest verkocht eerst?</button>
