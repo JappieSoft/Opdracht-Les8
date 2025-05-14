@@ -63,7 +63,7 @@ function App() {
                         <h2>Best verkochte TV</h2>
                         <article className="deTvBanner">
                             <div className="deTvBannerImg">
-                                <img id="bestSellerIMG" src={document.textContent = tvImage(bestSellingTv)}
+                                <img className="bannerIMG" src={document.textContent = tvImage(bestSellingTv)}
                                      alt="tv picture"></img>
                             </div>
                             <div className="deTvBannerText">
@@ -81,12 +81,50 @@ function App() {
                         </article>
                     </section>
                     <h2>Alle Televisies</h2>
-                    <section className="navButtons">
+                    <section className="alleTVs">
                         <nav className="navbar">
                             <button className="navButton" onClick={meestVerkochtKlik}>Meest verkocht eerst?</button>
                             <button className="navButton" onClick={goedkoopsteKlik}>Goedkoopste eerst?</button>
                             <button className="navButton" onClick={geschiktSportKlik}>Meest geschikt voor sport eerst?</button>
                     </nav>
+                        <div className="tvOverzicht">
+{/*  Opdracht 2A (geen id in inventory array dus foutmelding, geen id toegevoegd omdat het op een oefen opdracht lijkt:
+                            <ul>
+                                {inventory.map((tvs) => {
+                                    return <li>{tvs.brand}</li>
+                                })}
+                            </ul>*/}
+
+                            <ul>
+                                {inventory.map((tvs) => {
+                                    return <li key={tvs.type}> {/*Not sure if this is ok but type is a unique item*/}
+                                <article className="deTvBanner">
+                                    <div className="deTvBannerImg">
+                                        <img className="bannerIMG" src={document.textContent = tvImage(tvs)}
+                                             alt="tv picture"></img>
+                                    </div>
+                                    <div className="deTvBannerText">
+                                        <p id="tvName">{document.textContent = tvName(tvs)}</p>
+                                        <p id="tvPrice">{document.textContent = tvPrice(tvs)}</p>
+                                        <p id="tvSizes">{document.textContent = availableSizes(tvs)}</p>
+                                        <p id="tvOptions"><img
+                                            className="check-icons" src="src/assets/check.png" alt="check icon"/> wifi <img
+                                            className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> speech <img
+                                            className="check-icons" src="src/assets/check.png" alt="check icon"/> hdr <img
+                                            className="check-icons" src="src/assets/check.png" alt="check icon"/> bluetooth <img
+                                            className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> ambilight
+                                        </p>
+                                    </div>
+                                </article>
+                                </li>
+                            })}
+                            </ul>
+
+
+
+
+
+                        </div>
                     </section>
                 </div>
             </main>

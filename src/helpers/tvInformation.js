@@ -21,7 +21,7 @@ export function availableSizes(inputArray) {
     let sizeConversion;
     let calcString;
     let calcArray = [];
-    for (let i = 1; i < inputArray.availableSizes.length; i++) {
+    for (let i = 0; i < inputArray.availableSizes.length; i++) {
         sizeConversion = Math.trunc(inputArray.availableSizes[i] * 2.54);
         calcString = `${inputArray.availableSizes[i]} inch (${sizeConversion} cm)`;
         calcArray.push(calcString);

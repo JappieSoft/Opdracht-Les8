@@ -99,6 +99,8 @@ p{
 
 }
 
+/*-------------------- TV article --------------------*/
+
 .deTvBanner{
     display: flex;
     border: var(--color-black) dashed 1px;
@@ -110,10 +112,11 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 378px;
 }
 
-#bestSellerIMG{
-    height: 250px;
+.bannerIMG{
+    max-height: 250px;
 }
 
 .deTvBannerText{
@@ -135,9 +138,11 @@ p{
 }
 
 .check-icons{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
+
+/*-------------------- Alle Tv's section --------------------*/
 /*-------------------- NAV-BUTTONS --------------------*/
 
 .navbar{
@@ -160,6 +165,17 @@ p{
 
 .navbar button:hover, .navbar button:active {
     background-color: var(--color-gray);
+}
+
+/*-------------------- Tv Overzicht --------------------*/
+
+.tvOverzicht ul{
+    padding: 2em 0 2em 0;
+}
+
+.tvOverzicht li{
+    list-style: none;
+    padding: 1em 0 1em 0;
 }
 
 

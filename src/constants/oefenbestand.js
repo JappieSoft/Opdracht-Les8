@@ -28,9 +28,13 @@ function showOutcomeInConsole() {
     console.log(bigTV);
 
     console.log('uitkomst opdracht 1f');
-    /*const ambiTV = inventory.filter((ambiOption) => { return ambiOption ? ambiOption.options.name === ambiOption.options.find((option) => option.name) : `None available at the moment`; });*/
-    console.log( inventory.options.find((option) => option.name === 'ambiLight')? option.applicable );
-    /*console.log(ambiTV);*/
+
+    const ambiTV = inventory.filter(television => {
+        const ambiOption = television.options.find(option => option.name === "ambiLight");
+        return (ambiOption && ambiOption.applicable === true);
+    });
+
+    console.log(ambiTV);
 
 
 
