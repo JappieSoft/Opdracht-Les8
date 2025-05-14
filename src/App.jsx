@@ -3,7 +3,7 @@ import {inventory, bestSellingTv} from './constants/inventory.js';
 import salesCounter from './helpers/sales.js';
 import stockCounter from "./helpers/stock.js";
 import purchasedCounter from "./helpers/purchases.js";
-import tvName, { tvPrice, tvImage, availableSizes } from "./helpers/tvInformation.js";
+import tvName, { tvPrice, tvImage, availableSizes, tvOptions } from "./helpers/tvInformation.js";
 
 /*Temp bestand hieronder:*/
 import showOutcomeInConsole from './constants/oefenbestand.js';
@@ -88,6 +88,7 @@ function App() {
                             <button className="navButton" onClick={geschiktSportKlik}>Meest geschikt voor sport eerst?</button>
                     </nav>
                         <div className="tvOverzicht">
+
 {/*  Opdracht 2A (geen id in inventory array dus foutmelding, geen id toegevoegd omdat het op een oefen opdracht lijkt:
                             <ul>
                                 {inventory.map((tvs) => {
@@ -107,13 +108,14 @@ function App() {
                                         <p id="tvName">{document.textContent = tvName(tvs)}</p>
                                         <p id="tvPrice">{document.textContent = tvPrice(tvs)}</p>
                                         <p id="tvSizes">{document.textContent = availableSizes(tvs)}</p>
-                                        <p id="tvOptions"><img
+                                        <p id="tvOptions2"><img
                                             className="check-icons" src="src/assets/check.png" alt="check icon"/> wifi <img
                                             className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> speech <img
                                             className="check-icons" src="src/assets/check.png" alt="check icon"/> hdr <img
                                             className="check-icons" src="src/assets/check.png" alt="check icon"/> bluetooth <img
                                             className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> ambilight
                                         </p>
+                                        <p id="tvoptions">{document.textContent = tvOptions(tvs)}</p>
                                     </div>
                                 </article>
                                 </li>
