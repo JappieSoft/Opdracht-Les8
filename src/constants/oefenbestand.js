@@ -37,16 +37,7 @@ function showOutcomeInConsole() {
     console.log(ambiTV);
 
 
-    console.log('uitkomst opdracht sort');
-    const sort =    inventory.sort((a, b) => b - a);
-    console.log(sort);
-
 }
-
-
-
-
-
 
 
 

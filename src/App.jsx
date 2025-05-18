@@ -21,15 +21,21 @@ function App() {
 
 
     function meestVerkochtKlik() {
-        console.log('Meest verkocht eerst?');
+        const meestVerkochtSort =    [...inventory].sort((a, b) => b.sold - a.sold);
+        console.log("Gesorteerd op meest Verkocht:")
+        console.log(meestVerkochtSort);
     }
 
     function goedkoopsteKlik() {
-        console.log('Goedkoopste eerst?');
+        const GoedkoopsteSort =    [...inventory].sort((a, b) =>  a.price - b.price);
+        console.log("Gesorteerd op goedkoopste tv:")
+        console.log(GoedkoopsteSort);
     }
 
     function geschiktSportKlik() {
-        console.log('Geschikt voor sport eerst?');
+        const sportSort =    [...inventory].sort((a, b) => b.refreshRate - a.refreshRate);
+        console.log("Gesorteerd geschikt voor Sport:")
+        console.log(sportSort);
     }
 
 
