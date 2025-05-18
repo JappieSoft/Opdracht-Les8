@@ -1,0 +1,187 @@
+/*-------------------- CSS RESET --------------------*/
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-ligthgreen: hsla(130, 50%, 30%, 0.1);   /*background-color green*/
+    --color-green: hsla(130, 50%, 49%, 0.8);        /*normal-color green*/
+    --color-blue: hsla(240, 89%, 40%, 0.8);         /*normal-color blue*/
+    --color-lightblue: hsla(240, 89%, 40%, 0.1);    /*background-color blue*/
+    --color-red: hsla(0, 89%, 40%, 0.8);            /*normal-color blue*/
+    --color-lightred: hsla(0, 89%, 40%, 0.1);       /*background-color blue*/
+    --color-lightgray: hsla(0, 0%, 83%, 1.0);
+    --color-gray: hsla(0, 0%, 70%, 1.0);
+    --color-black: hsl(0, 0%, 5%, 1.0);
+
+}
+
+/*-------------------- Typographi --------------------*/
+
+h2{
+    padding: 1em 0 1em 0;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+/*-------------------- CONTAINERS --------------------*/
+
+.outercontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.innercontainter{
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+/*-------------------- HEADER --------------------*/
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+/*-------------------- MAIN --------------------*/
+/*-------------------- VERKOOP OVERZICHT --------------------*/
+
+.verkoopOverzicht {
+    display: flex;
+    justify-content: space-between;
+}
+
+.numberArticle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    row-gap: 1em;
+    padding: 1em;
+}
+
+
+.salesNumber{
+    color: 	var(--color-green);
+    border: var(--color-green) solid 1px;
+    background-color: var(--color-ligthgreen);
+}
+
+.purchaseNumber{
+    color: 	var(--color-blue);
+    border: var(--color-blue) solid 1px;
+    background-color: 	var(--color-lightblue);
+}
+
+.toSellNumber{
+    color: 	var(--color-red);
+    border: var(--color-red) solid 1px;
+    background-color: 	var(--color-lightred);
+}
+
+/*-------------------- BESTSELLER --------------------*/
+
+.bestVerkochteTv {
+
+}
+
+/*-------------------- TV article --------------------*/
+
+.deTvBanner{
+    display: flex;
+    border: var(--color-black) dashed 1px;
+    background-color: var(--color-lightgray);
+    padding: 1.5em;
+}
+
+.deTvBannerImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 378px;
+}
+
+.bannerIMG{
+    max-height: 250px;
+}
+
+.deTvBannerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2em;
+    gap: 3em;
+}
+
+#tvPrice {
+    font-size: 2em;
+}
+
+#tvOptions{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.checkIcons{
+    width: 20px;
+    height: 20px;
+}
+
+/*-------------------- Alle Tv's section --------------------*/
+/*-------------------- NAV-BUTTONS --------------------*/
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+}
+
+.navbar button, .navbar button:visited {
+    background-color: var(--color-lightgray);
+    color: var(--color-black);
+    border: var(--color-black) solid 2px;
+    height: 40px;
+    width: 250px;
+    border-radius: 0.5em;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar button:hover, .navbar button:active {
+    background-color: var(--color-gray);
+}
+
+/*-------------------- Tv Overzicht --------------------*/
+
+.tvOverzicht li{
+    list-style: none;
+    padding: 1em 0 1em 0;
+}
+
+.tvOptionsList {
+    display: flex;
+    gap: 1em;
+}
+
+.textIcons{
+    font-size: 1.2em;
+}
+
+/*-------------------- THE END --------------------*/
