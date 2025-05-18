@@ -3,11 +3,10 @@ import {inventory, bestSellingTv} from './constants/inventory.js';
 import salesCounter from './helpers/sales.js';
 import stockCounter from "./helpers/stock.js";
 import purchasedCounter from "./helpers/purchases.js";
-import tvName, { tvPrice, tvImage, availableSizes, tvOptions } from "./helpers/tvInformation.js";
+import tvName, {tvPrice, tvImage, availableSizes} from "./helpers/tvInformation.js";
 
 /*Temp bestand hieronder:*/
 import showOutcomeInConsole from './constants/oefenbestand.js';
-
 
 
 function App() {
@@ -21,13 +20,15 @@ function App() {
     console.log(`to sell: ${purchasedCounter(inventory)}`);
 
 
-    function  meestVerkochtKlik () {
+    function meestVerkochtKlik() {
         console.log('Meest verkocht eerst?');
     }
-    function  goedkoopsteKlik () {
+
+    function goedkoopsteKlik() {
         console.log('Goedkoopste eerst?');
     }
-    function  geschiktSportKlik () {
+
+    function geschiktSportKlik() {
         console.log('Geschikt voor sport eerst?');
     }
 
@@ -63,19 +64,20 @@ function App() {
                         <h2>Best verkochte TV</h2>
                         <article className="deTvBanner">
                             <div className="deTvBannerImg">
-                                <img className="bannerIMG" src={document.textContent = tvImage(bestSellingTv)}
+                                <img className="bannerIMG" src={tvImage(bestSellingTv)}
                                      alt="tv picture"></img>
                             </div>
                             <div className="deTvBannerText">
-                                <p id="tvName">{document.textContent = tvName(bestSellingTv)}</p>
-                                <p id="tvPrice">{document.textContent = tvPrice(bestSellingTv)}</p>
-                                <p id="tvSizes">{document.textContent = availableSizes(bestSellingTv)}</p>
+                                <p id="tvName">{tvName(bestSellingTv)}</p>
+                                <p id="tvPrice">{tvPrice(bestSellingTv)}</p>
+                                <p id="tvSizes">{availableSizes(bestSellingTv)}</p>
                                 <p id="tvOptions"><img
-                                    className="check-icons" src="src/assets/check.png" alt="check icon"/> wifi <img
-                                    className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> speech <img
-                                    className="check-icons" src="src/assets/check.png" alt="check icon"/> hdr <img
-                                    className="check-icons" src="src/assets/check.png" alt="check icon"/> bluetooth <img
-                                    className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> ambilight
+                                    className="checkIcons" src="src/assets/check.png" alt="check icon"/> wifi <img
+                                    className="checkIcons" src="src/assets/minus.png"
+                                    alt="NOT check icon"/> speech <img
+                                    className="checkIcons" src="src/assets/check.png" alt="check icon"/> hdr <img
+                                    className="checkIcons" src="src/assets/check.png" alt="check icon"/> bluetooth <img
+                                    className="checkIcons" src="src/assets/minus.png" alt="NOT check icon"/> ambilight
                                 </p>
                             </div>
                         </article>
@@ -85,11 +87,12 @@ function App() {
                         <nav className="navbar">
                             <button className="navButton" onClick={meestVerkochtKlik}>Meest verkocht eerst?</button>
                             <button className="navButton" onClick={goedkoopsteKlik}>Goedkoopste eerst?</button>
-                            <button className="navButton" onClick={geschiktSportKlik}>Meest geschikt voor sport eerst?</button>
-                    </nav>
+                            <button className="navButton" onClick={geschiktSportKlik}>Meest geschikt voor sport eerst?
+                            </button>
+                        </nav>
                         <div className="tvOverzicht">
 
-{/*  Opdracht 2A (geen id in inventory array dus foutmelding, geen id toegevoegd omdat het op een oefen opdracht lijkt:
+                            {/*  Opdracht 2A (geen id in inventory array dus foutmelding, geen id toegevoegd omdat het op een oefen opdracht lijkt:
                             <ul>
                                 {inventory.map((tvs) => {
                                     return <li>{tvs.brand}</li>
@@ -97,35 +100,33 @@ function App() {
                             </ul>*/}
 
                             <ul>
-                                {inventory.map((tvs) => {
-                                    return <li key={tvs.type}> {/*Not sure if this is ok but type is a unique item*/}
-                                <article className="deTvBanner">
-                                    <div className="deTvBannerImg">
-                                        <img className="bannerIMG" src={document.textContent = tvImage(tvs)}
-                                             alt="tv picture"></img>
-                                    </div>
-                                    <div className="deTvBannerText">
-                                        <p id="tvName">{document.textContent = tvName(tvs)}</p>
-                                        <p id="tvPrice">{document.textContent = tvPrice(tvs)}</p>
-                                        <p id="tvSizes">{document.textContent = availableSizes(tvs)}</p>
-                                        <p id="tvOptions2"><img
-                                            className="check-icons" src="src/assets/check.png" alt="check icon"/> wifi <img
-                                            className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> speech <img
-                                            className="check-icons" src="src/assets/check.png" alt="check icon"/> hdr <img
-                                            className="check-icons" src="src/assets/check.png" alt="check icon"/> bluetooth <img
-                                            className="check-icons" src="src/assets/minus.png" alt="NOT check icon"/> ambilight
-                                        </p>
-                                        <p id="tvoptions">{document.textContent = tvOptions(tvs)}</p>
-                                    </div>
-                                </article>
-                                </li>
-                            })}
+                                {inventory.map((tvs) => (
+                                    <li key={tvs.type}>
+                                        <article className="deTvBanner">
+                                            <div className="deTvBannerImg">
+                                                <img className="bannerIMG" src={tvImage(tvs)} alt="tv picture"/>
+                                            </div>
+                                            <div className="deTvBannerText">
+                                                <p id="tvName">{tvName(tvs)}</p>
+                                                <p id="tvPrice">{tvPrice(tvs)}</p>
+                                                <p id="tvSizes">{availableSizes(tvs)}</p>
+                                                <ul className="tvOptionsList">
+                                                    {tvs.options.map((option, index) => (
+                                                        <li key={index}>
+                                                            <img
+                                                                className="checkIcons"
+                                                                src={option.applicable ? "src/assets/check.png" : "src/assets/minus.png"}
+                                                                alt={option.applicable ? "check icon" : "not checked icon"}
+                                                            />{" "}
+                                                            <span className="textIcons">{option.name}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </article>
+                                    </li>
+                                ))}
                             </ul>
-
-
-
-
-
                         </div>
                     </section>
                 </div>

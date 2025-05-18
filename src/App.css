@@ -137,7 +137,7 @@ p{
     gap: 0.5em;
 }
 
-.check-icons{
+.checkIcons{
     width: 20px;
     height: 20px;
 }
@@ -148,6 +148,7 @@ p{
 .navbar{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 2em;
 }
 
 .navbar button, .navbar button:visited {
@@ -169,15 +170,18 @@ p{
 
 /*-------------------- Tv Overzicht --------------------*/
 
-.tvOverzicht ul{
-    padding: 2em 0 2em 0;
-}
-
 .tvOverzicht li{
     list-style: none;
     padding: 1em 0 1em 0;
 }
 
+.tvOptionsList {
+    display: flex;
+    gap: 1em;
+}
 
+.textIcons{
+    font-size: 1.2em;
+}
 
 /*-------------------- THE END --------------------*/

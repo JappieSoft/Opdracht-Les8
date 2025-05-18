@@ -1,4 +1,6 @@
 import {inventory} from "../constants/inventory.js";
+import check from "../assets/check.png";
+import minus from "../assets/minus.png";
 
 function tvName(inputArray) {
     let nameString = `${inputArray.brand} ${inputArray.type} - ${inputArray.name}`;
@@ -31,22 +33,6 @@ export function availableSizes(inputArray) {
     return calcArray.join(` | `);
 }
 
-export function tvOptions(inputArray) {
-    let optionString;
-    let optionArray = [];
-    const optionNames = inputArray.options.map((optionName) => { return optionName.name; });
-    console.log(optionNames);
 
-    const optionIcons = inputArray.options.map((optionIcon) => { return optionIcon.applicable ; });
-    console.log(optionIcons);
-
-    for (let i = 0; i < optionNames.length; i++) {
-        optionString = `${optionNames[i]}`;
-        optionArray.push(optionString);
-    }
-    return optionArray.join(" ");
-
-    console.log(optionArray);
-}
 
 export default tvName;
